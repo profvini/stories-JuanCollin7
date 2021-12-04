@@ -1,0 +1,739 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		130F4C0326F8FA9700C8658B /* pixels.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 130F4C0226F8FA9700C8658B /* pixels.cpp */; };
+		133F5484275BE70000E96866 /* stories.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 134505C227598E6A00DC6BB1 /* stories.cpp */; };
+		133F5488275BF1B900E96866 /* FilterManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 133F5486275BF1B900E96866 /* FilterManager.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		132EF8D926F40484002DC6B7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1308864C270A38F100C93F4E /* 2. Resultado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2. Resultado.png"; sourceTree = "<group>"; };
+		13088654270A39B000C93F4E /* 1. Regions - Resultado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1. Regions - Resultado.png"; sourceTree = "<group>"; };
+		13088656270A39F100C93F4E /* 1. Regions - Resultado 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1. Regions - Resultado 2.png"; sourceTree = "<group>"; };
+		1308865C270A3A4500C93F4E /* 1. TrocaRegioes - Resultado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1. TrocaRegioes - Resultado.png"; sourceTree = "<group>"; };
+		1308865E270A3B4700C93F4E /* bolhas2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bolhas2.png; sourceTree = "<group>"; };
+		13088663270A3BCC00C93F4E /* 2. Resultado2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2. Resultado2.png"; sourceTree = "<group>"; };
+		13088667270A5FDE00C93F4E /* motiondetector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = motiondetector.cpp; sourceTree = "<group>"; };
+		130BBE56273890DC00199DDB /* Image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image1.png; sourceTree = "<group>"; };
+		130BBE57273890DC00199DDB /* Image4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image4.png; sourceTree = "<group>"; };
+		130BBE58273890DC00199DDB /* Image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image2.png; sourceTree = "<group>"; };
+		130BBE59273890DC00199DDB /* Image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image3.png; sourceTree = "<group>"; };
+		130BBE5A2738915200199DDB /* Readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		130BBE612738975100199DDB /* SunsetTimelapse.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SunsetTimelapse.mp4; sourceTree = "<group>"; };
+		130BBE6527389B1A00199DDB /* tiltshiftVideo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tiltshiftVideo.cpp; sourceTree = "<group>"; };
+		130BBE702738A1CA00199DDB /* SunsetTimelapseSaida.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SunsetTimelapseSaida.mp4; sourceTree = "<group>"; };
+		130CC49827499C4700C3DC16 /* monalisa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = monalisa.jpg; sourceTree = "<group>"; };
+		130CC4A12749A83700C3DC16 /* MonalisaCannypoints.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MonalisaCannypoints.png; sourceTree = "<group>"; };
+		130CC4A22749A83700C3DC16 /* monalisa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monalisa.png; sourceTree = "<group>"; };
+		130CC4A92749B27300C3DC16 /* GrowlitheCannypoints.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GrowlitheCannypoints.png; sourceTree = "<group>"; };
+		130CC4AA2749B27B00C3DC16 /* growlithe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = growlithe.png; sourceTree = "<group>"; };
+		130F4C0226F8FA9700C8658B /* pixels.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = pixels.cpp; sourceTree = "<group>"; };
+		130F4C1326F902BB00C8658B /* regions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = regions.cpp; sourceTree = "<group>"; };
+		130F4C1726F9155D00C8658B /* trocaregioes.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = trocaregioes.cpp; sourceTree = "<group>"; };
+		130F4C1C26F92AD000C8658B /* Readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		1313A5DC270674B7000F3882 /* histogram.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = histogram.cpp; sourceTree = "<group>"; };
+		131928D42740B945003B3701 /* Readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		131928D72740BC45003B3701 /* Image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image1.png; sourceTree = "<group>"; };
+		131928D82740BC45003B3701 /* Image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image3.png; sourceTree = "<group>"; };
+		131928D92740BC45003B3701 /* Image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image2.png; sourceTree = "<group>"; };
+		131B9C71273F498300C72326 /* dft.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = dft.cpp; sourceTree = "<group>"; };
+		132EF8DB26F40484002DC6B7 /* OpenCV */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenCV; sourceTree = BUILT_PRODUCTS_DIR; };
+		132EF8DE26F40484002DC6B7 /* mainTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mainTest.cpp; sourceTree = "<group>"; };
+		132EF8E726F42A87002DC6B7 /* OpenCV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenCV.entitlements; sourceTree = "<group>"; };
+		13364D6E26FD441800B0CB6A /* Growlithe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Growlithe.png; sourceTree = "<group>"; };
+		13364D6F26FD441800B0CB6A /* bolhas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bolhas.png; sourceTree = "<group>"; };
+		13364D7126FD447300B0CB6A /* labeling.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = labeling.cpp; sourceTree = "<group>"; };
+		13364D7826FD478700B0CB6A /* Readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		1337483E274968B300DCCCDF /* canny.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = canny.cpp; sourceTree = "<group>"; };
+		1337484227496A5500DCCCDF /* pontilhismo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = pontilhismo.cpp; sourceTree = "<group>"; };
+		1337484927496CE300DCCCDF /* cannypoints.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cannypoints.cpp; sourceTree = "<group>"; };
+		133F5486275BF1B900E96866 /* FilterManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FilterManager.cpp; sourceTree = "<group>"; };
+		134505C227598E6A00DC6BB1 /* stories.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stories.cpp; sourceTree = "<group>"; };
+		13496B1E274B0BE700AEFEC5 /* Readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		13496B1F274B0FBF00AEFEC5 /* growlithe2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = growlithe2.png; sourceTree = "<group>"; };
+		136645A72713C41F008E3354 /* filtroespacial.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = filtroespacial.cpp; sourceTree = "<group>"; };
+		136DB0A6273F4E6400D93E0E /* homorfico.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = homorfico.cpp; sourceTree = "<group>"; };
+		136FCBE52713D3D400DA6715 /* Readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		136FCBE72713D47000DA6715 /* laplgauss2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laplgauss2.png; sourceTree = "<group>"; };
+		136FCBE82713D47000DA6715 /* laplgauss1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laplgauss1.png; sourceTree = "<group>"; };
+		136FCBE92713D47000DA6715 /* laplgauss3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laplgauss3.png; sourceTree = "<group>"; };
+		13764958270A7328003309B3 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		1376495B270A7993003309B3 /* Motion Detector.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "Motion Detector.mov"; sourceTree = "<group>"; };
+		13908EE42706886A000406E3 /* Equalize4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Equalize4.jpeg; sourceTree = "<group>"; };
+		13908EE52706886A000406E3 /* Equalize3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Equalize3.jpeg; sourceTree = "<group>"; };
+		13908EE62706886A000406E3 /* Equalize2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Equalize2.jpeg; sourceTree = "<group>"; };
+		13908EE72706886A000406E3 /* Equalize1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Equalize1.jpeg; sourceTree = "<group>"; };
+		13ABF9612713CE8E00B174E3 /* laplgauss.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = laplgauss.cpp; sourceTree = "<group>"; };
+		13BB373627517C9A00A918A8 /* kmeans.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kmeans.cpp; sourceTree = "<group>"; };
+		13BB373B27517E5E00A918A8 /* sushi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sushi.jpg; sourceTree = "<group>"; };
+		13BB37402751970200A918A8 /* KmeansDiff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KmeansDiff.png; sourceTree = "<group>"; };
+		13BB37412751971C00A918A8 /* Readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		13E74F6E2706834A00C4958D /* equalize.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = equalize.cpp; sourceTree = "<group>"; };
+		13F4C2582734B19D006846D5 /* addweighted.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = addweighted.cpp; sourceTree = "<group>"; };
+		13F4C2642734B317006846D5 /* blend1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blend1.jpg; sourceTree = "<group>"; };
+		13F4C2652734B317006846D5 /* blend2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blend2.jpg; sourceTree = "<group>"; };
+		13F4C2672734B5CD006846D5 /* tiltshift.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tiltshift.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		132EF8D826F40484002DC6B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1308864D270A393F00C93F4E /* Resultados */ = {
+			isa = PBXGroup;
+			children = (
+				13088657270A39F600C93F4E /* Regions */,
+				13088658270A39FE00C93F4E /* Troca Regioes */,
+			);
+			path = Resultados;
+			sourceTree = "<group>";
+		};
+		13088657270A39F600C93F4E /* Regions */ = {
+			isa = PBXGroup;
+			children = (
+				13088654270A39B000C93F4E /* 1. Regions - Resultado.png */,
+				13088656270A39F100C93F4E /* 1. Regions - Resultado 2.png */,
+			);
+			path = Regions;
+			sourceTree = "<group>";
+		};
+		13088658270A39FE00C93F4E /* Troca Regioes */ = {
+			isa = PBXGroup;
+			children = (
+				1308865C270A3A4500C93F4E /* 1. TrocaRegioes - Resultado.png */,
+			);
+			path = "Troca Regioes";
+			sourceTree = "<group>";
+		};
+		13088662270A3BB800C93F4E /* Resultados */ = {
+			isa = PBXGroup;
+			children = (
+				1308864C270A38F100C93F4E /* 2. Resultado.png */,
+				13088663270A3BCC00C93F4E /* 2. Resultado2.png */,
+			);
+			path = Resultados;
+			sourceTree = "<group>";
+		};
+		130BBE55273890BF00199DDB /* Tiltshift */ = {
+			isa = PBXGroup;
+			children = (
+				13F4C2672734B5CD006846D5 /* tiltshift.cpp */,
+				130BBE5B273892EA00199DDB /* Images */,
+			);
+			path = Tiltshift;
+			sourceTree = "<group>";
+		};
+		130BBE5B273892EA00199DDB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				130BBE56273890DC00199DDB /* Image1.png */,
+				130BBE58273890DC00199DDB /* Image2.png */,
+				130BBE59273890DC00199DDB /* Image3.png */,
+				130BBE57273890DC00199DDB /* Image4.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		130BBE5C2738968C00199DDB /* TiltshiftVideo */ = {
+			isa = PBXGroup;
+			children = (
+				130BBE60273896A900199DDB /* OutputVideo */,
+				130BBE6527389B1A00199DDB /* tiltshiftVideo.cpp */,
+			);
+			path = TiltshiftVideo;
+			sourceTree = "<group>";
+		};
+		130BBE60273896A900199DDB /* OutputVideo */ = {
+			isa = PBXGroup;
+			children = (
+				130BBE702738A1CA00199DDB /* SunsetTimelapseSaida.mp4 */,
+			);
+			name = OutputVideo;
+			path = "Video Saída";
+			sourceTree = "<group>";
+		};
+		130CC4A02749A82E00C3DC16 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				130CC4AA2749B27B00C3DC16 /* growlithe.png */,
+				13496B1F274B0FBF00AEFEC5 /* growlithe2.png */,
+				130CC4A92749B27300C3DC16 /* GrowlitheCannypoints.png */,
+				130CC4A12749A83700C3DC16 /* MonalisaCannypoints.png */,
+				130CC4A22749A83700C3DC16 /* monalisa.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		130F4C1226F902A200C8658B /* 1. Manipulando Imagens */ = {
+			isa = PBXGroup;
+			children = (
+				1308864D270A393F00C93F4E /* Resultados */,
+				130F4C0226F8FA9700C8658B /* pixels.cpp */,
+				130F4C1C26F92AD000C8658B /* Readme.txt */,
+				130F4C1326F902BB00C8658B /* regions.cpp */,
+				130F4C1726F9155D00C8658B /* trocaregioes.cpp */,
+			);
+			name = "1. Manipulando Imagens";
+			path = "2. Manipulação de imagens";
+			sourceTree = "<group>";
+		};
+		1313A5DB2706748E000F3882 /* 3. Histogramas */ = {
+			isa = PBXGroup;
+			children = (
+				13908EE22706885A000406E3 /* Equalize */,
+				1313A5DC270674B7000F3882 /* histogram.cpp */,
+				1376495A270A7966003309B3 /* Motion Detector */,
+				13764958270A7328003309B3 /* Readme.txt */,
+			);
+			path = "3. Histogramas";
+			sourceTree = "<group>";
+		};
+		131928D52740BBEC003B3701 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				131928D72740BC45003B3701 /* Image1.png */,
+				131928D92740BC45003B3701 /* Image2.png */,
+				131928D82740BC45003B3701 /* Image3.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		131B9C70273F494A00C72326 /* 6. Filtragem Frequencia */ = {
+			isa = PBXGroup;
+			children = (
+				131928D52740BBEC003B3701 /* Images */,
+				131B9C71273F498300C72326 /* dft.cpp */,
+				136DB0A6273F4E6400D93E0E /* homorfico.cpp */,
+				131928D42740B945003B3701 /* Readme.txt */,
+			);
+			path = "6. Filtragem Frequencia";
+			sourceTree = "<group>";
+		};
+		132EF8D226F40484002DC6B7 = {
+			isa = PBXGroup;
+			children = (
+				132EF8DD26F40484002DC6B7 /* OpenCV */,
+				132EF8DC26F40484002DC6B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		132EF8DC26F40484002DC6B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				132EF8DB26F40484002DC6B7 /* OpenCV */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		132EF8DD26F40484002DC6B7 /* OpenCV */ = {
+			isa = PBXGroup;
+			children = (
+				134505BA27598C7400DC6BB1 /* Backup para consulta */,
+				132EF8E726F42A87002DC6B7 /* OpenCV.entitlements */,
+				13364D6D26FD441800B0CB6A /* Resources */,
+				134505C227598E6A00DC6BB1 /* stories.cpp */,
+				133F5486275BF1B900E96866 /* FilterManager.cpp */,
+			);
+			path = OpenCV;
+			sourceTree = "<group>";
+		};
+		13364D6D26FD441800B0CB6A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				13BB373B27517E5E00A918A8 /* sushi.jpg */,
+				130CC49827499C4700C3DC16 /* monalisa.jpg */,
+				130BBE612738975100199DDB /* SunsetTimelapse.mp4 */,
+				13F4C2642734B317006846D5 /* blend1.jpg */,
+				13F4C2652734B317006846D5 /* blend2.jpg */,
+				13364D6E26FD441800B0CB6A /* Growlithe.png */,
+				13364D6F26FD441800B0CB6A /* bolhas.png */,
+				1308865E270A3B4700C93F4E /* bolhas2.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		13364D7026FD444E00B0CB6A /* 2. Preenchimentos */ = {
+			isa = PBXGroup;
+			children = (
+				13088662270A3BB800C93F4E /* Resultados */,
+				13364D7826FD478700B0CB6A /* Readme.txt */,
+				13364D7126FD447300B0CB6A /* labeling.cpp */,
+			);
+			path = "2. Preenchimentos";
+			sourceTree = "<group>";
+		};
+		1337483C2749688800DCCCDF /* 7. Deteccao de Bordas */ = {
+			isa = PBXGroup;
+			children = (
+				1337483E274968B300DCCCDF /* canny.cpp */,
+				1337484927496CE300DCCCDF /* cannypoints.cpp */,
+				130CC4A02749A82E00C3DC16 /* Images */,
+				1337484227496A5500DCCCDF /* pontilhismo.cpp */,
+				13496B1E274B0BE700AEFEC5 /* Readme.txt */,
+			);
+			path = "7. Deteccao de Bordas";
+			sourceTree = "<group>";
+		};
+		134505BA27598C7400DC6BB1 /* Backup para consulta */ = {
+			isa = PBXGroup;
+			children = (
+				130F4C1226F902A200C8658B /* 1. Manipulando Imagens */,
+				13364D7026FD444E00B0CB6A /* 2. Preenchimentos */,
+				1313A5DB2706748E000F3882 /* 3. Histogramas */,
+				136645A62713C3E8008E3354 /* 4. Dominio Espacial I */,
+				13F4C2572734B16E006846D5 /* 5. Dominio Espacial II */,
+				131B9C70273F494A00C72326 /* 6. Filtragem Frequencia */,
+				1337483C2749688800DCCCDF /* 7. Deteccao de Bordas */,
+				13BB373527517C8300A918A8 /* 8. K Means */,
+				132EF8DE26F40484002DC6B7 /* mainTest.cpp */,
+			);
+			path = "Backup para consulta";
+			sourceTree = "<group>";
+		};
+		136645A62713C3E8008E3354 /* 4. Dominio Espacial I */ = {
+			isa = PBXGroup;
+			children = (
+				136FCBE62713D43000DA6715 /* Imagens */,
+				136645A72713C41F008E3354 /* filtroespacial.cpp */,
+				13ABF9612713CE8E00B174E3 /* laplgauss.cpp */,
+				136FCBE52713D3D400DA6715 /* Readme.txt */,
+			);
+			path = "4. Dominio Espacial I";
+			sourceTree = "<group>";
+		};
+		136FCBE62713D43000DA6715 /* Imagens */ = {
+			isa = PBXGroup;
+			children = (
+				136FCBE82713D47000DA6715 /* laplgauss1.png */,
+				136FCBE72713D47000DA6715 /* laplgauss2.png */,
+				136FCBE92713D47000DA6715 /* laplgauss3.png */,
+			);
+			path = Imagens;
+			sourceTree = "<group>";
+		};
+		1376495A270A7966003309B3 /* Motion Detector */ = {
+			isa = PBXGroup;
+			children = (
+				1376495B270A7993003309B3 /* Motion Detector.mov */,
+				13088667270A5FDE00C93F4E /* motiondetector.cpp */,
+			);
+			path = "Motion Detector";
+			sourceTree = "<group>";
+		};
+		13908EE22706885A000406E3 /* Equalize */ = {
+			isa = PBXGroup;
+			children = (
+				13908EE327068860000406E3 /* Images */,
+				13E74F6E2706834A00C4958D /* equalize.cpp */,
+			);
+			path = Equalize;
+			sourceTree = "<group>";
+		};
+		13908EE327068860000406E3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				13908EE72706886A000406E3 /* Equalize1.jpeg */,
+				13908EE62706886A000406E3 /* Equalize2.jpeg */,
+				13908EE52706886A000406E3 /* Equalize3.jpeg */,
+				13908EE42706886A000406E3 /* Equalize4.jpeg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		13BB373527517C8300A918A8 /* 8. K Means */ = {
+			isa = PBXGroup;
+			children = (
+				13BB373F275196F900A918A8 /* Images */,
+				13BB373627517C9A00A918A8 /* kmeans.cpp */,
+				13BB37412751971C00A918A8 /* Readme.txt */,
+			);
+			path = "8. K Means";
+			sourceTree = "<group>";
+		};
+		13BB373F275196F900A918A8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				13BB37402751970200A918A8 /* KmeansDiff.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		13F4C2572734B16E006846D5 /* 5. Dominio Espacial II */ = {
+			isa = PBXGroup;
+			children = (
+				13F4C2582734B19D006846D5 /* addweighted.cpp */,
+				130BBE5A2738915200199DDB /* Readme.txt */,
+				130BBE55273890BF00199DDB /* Tiltshift */,
+				130BBE5C2738968C00199DDB /* TiltshiftVideo */,
+			);
+			path = "5. Dominio Espacial II";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		132EF8DA26F40484002DC6B7 /* OpenCV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 132EF8E226F40484002DC6B7 /* Build configuration list for PBXNativeTarget "OpenCV" */;
+			buildPhases = (
+				132EF8D726F40484002DC6B7 /* Sources */,
+				132EF8D826F40484002DC6B7 /* Frameworks */,
+				132EF8D926F40484002DC6B7 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenCV;
+			productName = OpenCV;
+			productReference = 132EF8DB26F40484002DC6B7 /* OpenCV */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		132EF8D326F40484002DC6B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					132EF8DA26F40484002DC6B7 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 132EF8D626F40484002DC6B7 /* Build configuration list for PBXProject "OpenCV" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 132EF8D226F40484002DC6B7;
+			productRefGroup = 132EF8DC26F40484002DC6B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				132EF8DA26F40484002DC6B7 /* OpenCV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		132EF8D726F40484002DC6B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				130F4C0326F8FA9700C8658B /* pixels.cpp in Sources */,
+				133F5488275BF1B900E96866 /* FilterManager.cpp in Sources */,
+				133F5484275BE70000E96866 /* stories.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		132EF8E026F40484002DC6B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		132EF8E126F40484002DC6B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		132EF8E326F40484002DC6B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OpenCV/OpenCV.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 358B489RKB;
+				ENABLE_HARDENED_RUNTIME = NO;
+				HEADER_SEARCH_PATHS = /usr/local/opt/opencv/include/opencv4;
+				LIBRARY_SEARCH_PATHS = /usr/local/opt/opencv/lib;
+				OTHER_LDFLAGS = (
+					"-lopencv_gapi",
+					"-lopencv_stitching",
+					"-lopencv_alphamat",
+					"-lopencv_aruco",
+					"-lopencv_barcode",
+					"-lopencv_bgsegm",
+					"-lopencv_bioinspired",
+					"-lopencv_ccalib",
+					"-lopencv_dnn_objdetect",
+					"-lopencv_dnn_superres",
+					"-lopencv_dpm",
+					"-lopencv_face",
+					"-lopencv_freetype",
+					"-lopencv_fuzzy",
+					"-lopencv_hfs",
+					"-lopencv_img_hash",
+					"-lopencv_intensity_transform",
+					"-lopencv_line_descriptor",
+					"-lopencv_mcc",
+					"-lopencv_quality",
+					"-lopencv_rapid",
+					"-lopencv_reg",
+					"-lopencv_rgbd",
+					"-lopencv_saliency",
+					"-lopencv_sfm",
+					"-lopencv_stereo",
+					"-lopencv_structured_light",
+					"-lopencv_phase_unwrapping",
+					"-lopencv_superres",
+					"-lopencv_optflow",
+					"-lopencv_surface_matching",
+					"-lopencv_tracking",
+					"-lopencv_highgui",
+					"-lopencv_datasets",
+					"-lopencv_text",
+					"-lopencv_plot",
+					"-lopencv_videostab",
+					"-lopencv_videoio",
+					"-lopencv_viz",
+					"-lopencv_wechat_qrcode",
+					"-lopencv_xfeatures2d",
+					"-lopencv_shape",
+					"-lopencv_ml",
+					"-lopencv_ximgproc",
+					"-lopencv_video",
+					"-lopencv_dnn",
+					"-lopencv_xobjdetect",
+					"-lopencv_objdetect",
+					"-lopencv_calib3d",
+					"-lopencv_imgcodecs",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_xphoto",
+					"-lopencv_photo",
+					"-lopencv_imgproc",
+					"-lopencv_core",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		132EF8E426F40484002DC6B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OpenCV/OpenCV.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 358B489RKB;
+				ENABLE_HARDENED_RUNTIME = NO;
+				HEADER_SEARCH_PATHS = /usr/local/opt/opencv/include/opencv4;
+				LIBRARY_SEARCH_PATHS = /usr/local/opt/opencv/lib;
+				OTHER_LDFLAGS = (
+					"-lopencv_gapi",
+					"-lopencv_stitching",
+					"-lopencv_alphamat",
+					"-lopencv_aruco",
+					"-lopencv_barcode",
+					"-lopencv_bgsegm",
+					"-lopencv_bioinspired",
+					"-lopencv_ccalib",
+					"-lopencv_dnn_objdetect",
+					"-lopencv_dnn_superres",
+					"-lopencv_dpm",
+					"-lopencv_face",
+					"-lopencv_freetype",
+					"-lopencv_fuzzy",
+					"-lopencv_hfs",
+					"-lopencv_img_hash",
+					"-lopencv_intensity_transform",
+					"-lopencv_line_descriptor",
+					"-lopencv_mcc",
+					"-lopencv_quality",
+					"-lopencv_rapid",
+					"-lopencv_reg",
+					"-lopencv_rgbd",
+					"-lopencv_saliency",
+					"-lopencv_sfm",
+					"-lopencv_stereo",
+					"-lopencv_structured_light",
+					"-lopencv_phase_unwrapping",
+					"-lopencv_superres",
+					"-lopencv_optflow",
+					"-lopencv_surface_matching",
+					"-lopencv_tracking",
+					"-lopencv_highgui",
+					"-lopencv_datasets",
+					"-lopencv_text",
+					"-lopencv_plot",
+					"-lopencv_videostab",
+					"-lopencv_videoio",
+					"-lopencv_viz",
+					"-lopencv_wechat_qrcode",
+					"-lopencv_xfeatures2d",
+					"-lopencv_shape",
+					"-lopencv_ml",
+					"-lopencv_ximgproc",
+					"-lopencv_video",
+					"-lopencv_dnn",
+					"-lopencv_xobjdetect",
+					"-lopencv_objdetect",
+					"-lopencv_calib3d",
+					"-lopencv_imgcodecs",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_xphoto",
+					"-lopencv_photo",
+					"-lopencv_imgproc",
+					"-lopencv_core",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		132EF8D626F40484002DC6B7 /* Build configuration list for PBXProject "OpenCV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				132EF8E026F40484002DC6B7 /* Debug */,
+				132EF8E126F40484002DC6B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		132EF8E226F40484002DC6B7 /* Build configuration list for PBXNativeTarget "OpenCV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				132EF8E326F40484002DC6B7 /* Debug */,
+				132EF8E426F40484002DC6B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 132EF8D326F40484002DC6B7 /* Project object */;
+}
