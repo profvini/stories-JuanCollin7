@@ -32,6 +32,18 @@ int getUpdatedFilterIndex(int maxValue, int currentValue, bool isIncrementing) {
     return newValue;
 }
 
+string getTitle(char currentMode) {
+    
+    switch(currentMode) {
+        case 'f':
+            return "Aplicando filtros";
+        case 't':
+            return "Aplicando texto";
+        default:
+            return "";
+    }
+}
+
 int main(int, char **) {
     cv::VideoCapture cap;  // open the default camera
     
@@ -59,6 +71,9 @@ int main(int, char **) {
     int maxFilters = 5;
     int filtersIndex = -1;
     Mat filters[5] = {sepia, media, gauss, horizontal, laplacian};
+    
+    char currentMode = 'f';
+    string userText = "";
     
     cv::Mat frame, framegray;
     cv::Mat result;
@@ -98,36 +113,63 @@ int main(int, char **) {
         
         framegray.convertTo(result, CV_8U);
         
-        
         Mat currentFilter;
+        
+        string title = getTitle(currentMode);
         
         if(filtersIndex >= 0) {
             currentFilter = filters[filtersIndex];
             
             cv::transform(frame, result, currentFilter);
             cv::flip(result, result, 1);
+//            cv::putText(result, title, cv::Point(10, 30), cv::QT_FONT_NORMAL, 1, Scalar(255, 255, 255), 2);
+            cv::putText(result, userText, cv::Point(10, 460), cv::QT_FONT_NORMAL, 1, Scalar(255, 255, 255), 2);
             cv::imshow("filtroespacial", result);
         } else {
+//            cv::putText(framegray, title, cv::Point(10, 30), cv::QT_FONT_NORMAL, 1, Scalar(255, 255, 255), 2);
+            cv::putText(framegray, userText, cv::Point(10, 460), cv::QT_FONT_NORMAL, 1, Scalar(255, 255, 255), 2);
             cv::imshow("filtroespacial", framegray);
         }
         
-        
         key = (char)cv::waitKey(10);
         if (key == 27) break;
+        
         switch (key) {
-            case 'a':
-//                cv::transform(frame, result, currentFilter);
-//                cv::flip(result, result, 1);
-//                cv::imshow("filtroespacial", result);
-                filtersIndex = getUpdatedFilterIndex(maxFilters, filtersIndex, false);
+            case 'f':
+                if(currentMode != 't') {
+                    currentMode = 'f';
+                }
                 break;
-            case 'd':
-                filtersIndex = getUpdatedFilterIndex(maxFilters, filtersIndex, true);
+            case 't':
+                currentMode = 't';
+                cout << "Por favor, digite o texto desejado: ";
+                cin >> userText;
+                currentMode = 'f';
                 break;
             default:
-//                cv::imshow("filtroespacial", framegray);
                 break;
         }
+        
+        switch(currentMode) {
+            case 'f':
+                switch (key) {
+                    case 'a':
+                        filtersIndex = getUpdatedFilterIndex(maxFilters, filtersIndex, false);
+                        break;
+                    case 'd':
+                        filtersIndex = getUpdatedFilterIndex(maxFilters, filtersIndex, true);
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            case 't':
+                break;
+            default:
+                break;
+        }
+        
+        
     }
     return 0;
 }
