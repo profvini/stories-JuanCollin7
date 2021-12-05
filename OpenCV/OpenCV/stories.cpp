@@ -80,35 +80,18 @@ int main(int, char **) {
     double width, height;
     char key;
     
-    cap.open(0);
+    string imgPath = "Growlithe.png";
+    cout << "Por favor, digite o nome do arquivo: ";
+    cin >> imgPath;
     
-    if (!cap.isOpened())
-        return -1;
-    
-    cap.set(cv::CAP_PROP_FRAME_WIDTH, 640);
-    cap.set(cv::CAP_PROP_FRAME_HEIGHT, 480);
-    width = cap.get(cv::CAP_PROP_FRAME_WIDTH);
-    height = cap.get(cv::CAP_PROP_FRAME_HEIGHT);
-    std::cout << "largura=" << width << "\n";
-    ;
-    std::cout << "altura =" << height << "\n";
-    ;
-    std::cout << "fps    =" << cap.get(cv::CAP_PROP_FPS) << "\n";
-    std::cout << "format =" << cap.get(cv::CAP_PROP_FORMAT) << "\n";
+    Mat img = imread(imgPath, cv::IMREAD_COLOR);
     
     cv::namedWindow("filtroespacial", cv::WINDOW_NORMAL);
     cv::namedWindow("original", cv::WINDOW_NORMAL);
     
-//    string imgPath = "Growlithe.png";
-//    Mat img = imread(imgPath, cv::IMREAD_COLOR);
-//
-//    cv::transform(img, result, sepia);
-//    cv::imshow("image", result);
-    
     for (;;) {
-        cap >> frame;  // get a new frame from camera
-        cv::cvtColor(frame, framegray, cv::IMREAD_COLOR);
-        cv::flip(framegray, framegray, 1);
+        cv::cvtColor(img, framegray, cv::IMREAD_COLOR);
+//        cv::flip(framegray, framegray, 1);
         cv::imshow("original", framegray);
         
         framegray.convertTo(result, CV_8U);
@@ -120,8 +103,8 @@ int main(int, char **) {
         if(filtersIndex >= 0) {
             currentFilter = filters[filtersIndex];
             
-            cv::transform(frame, result, currentFilter);
-            cv::flip(result, result, 1);
+            cv::transform(img, result, currentFilter);
+//            cv::flip(result, result, 1);
 //            cv::putText(result, title, cv::Point(10, 30), cv::QT_FONT_NORMAL, 1, Scalar(255, 255, 255), 2);
             cv::putText(result, userText, cv::Point(10, 460), cv::QT_FONT_NORMAL, 1, Scalar(255, 255, 255), 2);
             cv::imshow("filtroespacial", result);
@@ -146,6 +129,11 @@ int main(int, char **) {
                 cin >> userText;
                 currentMode = 'f';
                 break;
+            case 's':
+                if(currentMode != 't') {
+                    currentMode = 's';
+                }
+                break;
             default:
                 break;
         }
@@ -165,11 +153,13 @@ int main(int, char **) {
                 break;
             case 't':
                 break;
-            default:
-                break;
+            case 's':
+                string name = "";
+                cout << "Por favor, digite o nome do arquivo: ";
+                cin >> name;
+                imwrite(name + ".jpg", result);
+                return 0;
         }
-        
-        
     }
     return 0;
 }

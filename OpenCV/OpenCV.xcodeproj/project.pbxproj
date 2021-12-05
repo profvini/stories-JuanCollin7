@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		130F4C0326F8FA9700C8658B /* pixels.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 130F4C0226F8FA9700C8658B /* pixels.cpp */; };
-		133F5484275BE70000E96866 /* stories.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 134505C227598E6A00DC6BB1 /* stories.cpp */; };
-		133F5488275BF1B900E96866 /* FilterManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 133F5486275BF1B900E96866 /* FilterManager.cpp */; };
+		131DA4F0275D506B007B739A /* stories.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 134505C227598E6A00DC6BB1 /* stories.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,7 +64,6 @@
 		1337483E274968B300DCCCDF /* canny.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = canny.cpp; sourceTree = "<group>"; };
 		1337484227496A5500DCCCDF /* pontilhismo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = pontilhismo.cpp; sourceTree = "<group>"; };
 		1337484927496CE300DCCCDF /* cannypoints.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cannypoints.cpp; sourceTree = "<group>"; };
-		133F5486275BF1B900E96866 /* FilterManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FilterManager.cpp; sourceTree = "<group>"; };
 		134505C227598E6A00DC6BB1 /* stories.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stories.cpp; sourceTree = "<group>"; };
 		13496B1E274B0BE700AEFEC5 /* Readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 		13496B1F274B0FBF00AEFEC5 /* growlithe2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = growlithe2.png; sourceTree = "<group>"; };
@@ -257,7 +255,6 @@
 				132EF8E726F42A87002DC6B7 /* OpenCV.entitlements */,
 				13364D6D26FD441800B0CB6A /* Resources */,
 				134505C227598E6A00DC6BB1 /* stories.cpp */,
-				133F5486275BF1B900E96866 /* FilterManager.cpp */,
 			);
 			path = OpenCV;
 			sourceTree = "<group>";
@@ -451,8 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				130F4C0326F8FA9700C8658B /* pixels.cpp in Sources */,
-				133F5488275BF1B900E96866 /* FilterManager.cpp in Sources */,
-				133F5484275BE70000E96866 /* stories.cpp in Sources */,
+				131DA4F0275D506B007B739A /* stories.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
