@@ -28,9 +28,9 @@
 		13088654270A39B000C93F4E /* 1. Regions - Resultado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1. Regions - Resultado.png"; sourceTree = "<group>"; };
 		13088656270A39F100C93F4E /* 1. Regions - Resultado 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1. Regions - Resultado 2.png"; sourceTree = "<group>"; };
 		1308865C270A3A4500C93F4E /* 1. TrocaRegioes - Resultado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1. TrocaRegioes - Resultado.png"; sourceTree = "<group>"; };
-		1308865E270A3B4700C93F4E /* bolhas2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bolhas2.png; sourceTree = "<group>"; };
 		13088663270A3BCC00C93F4E /* 2. Resultado2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2. Resultado2.png"; sourceTree = "<group>"; };
 		13088667270A5FDE00C93F4E /* motiondetector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = motiondetector.cpp; sourceTree = "<group>"; };
+		130BB14C276172B40063607E /* MarioGalaxy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MarioGalaxy.jpg; sourceTree = "<group>"; };
 		130BBE56273890DC00199DDB /* Image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image1.png; sourceTree = "<group>"; };
 		130BBE57273890DC00199DDB /* Image4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image4.png; sourceTree = "<group>"; };
 		130BBE58273890DC00199DDB /* Image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image2.png; sourceTree = "<group>"; };
@@ -39,7 +39,6 @@
 		130BBE612738975100199DDB /* SunsetTimelapse.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SunsetTimelapse.mp4; sourceTree = "<group>"; };
 		130BBE6527389B1A00199DDB /* tiltshiftVideo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tiltshiftVideo.cpp; sourceTree = "<group>"; };
 		130BBE702738A1CA00199DDB /* SunsetTimelapseSaida.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SunsetTimelapseSaida.mp4; sourceTree = "<group>"; };
-		130CC49827499C4700C3DC16 /* monalisa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = monalisa.jpg; sourceTree = "<group>"; };
 		130CC4A12749A83700C3DC16 /* MonalisaCannypoints.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MonalisaCannypoints.png; sourceTree = "<group>"; };
 		130CC4A22749A83700C3DC16 /* monalisa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monalisa.png; sourceTree = "<group>"; };
 		130CC4A92749B27300C3DC16 /* GrowlitheCannypoints.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GrowlitheCannypoints.png; sourceTree = "<group>"; };
@@ -58,7 +57,6 @@
 		132EF8DE26F40484002DC6B7 /* mainTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mainTest.cpp; sourceTree = "<group>"; };
 		132EF8E726F42A87002DC6B7 /* OpenCV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenCV.entitlements; sourceTree = "<group>"; };
 		13364D6E26FD441800B0CB6A /* Growlithe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Growlithe.png; sourceTree = "<group>"; };
-		13364D6F26FD441800B0CB6A /* bolhas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bolhas.png; sourceTree = "<group>"; };
 		13364D7126FD447300B0CB6A /* labeling.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = labeling.cpp; sourceTree = "<group>"; };
 		13364D7826FD478700B0CB6A /* Readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 		1337483E274968B300DCCCDF /* canny.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = canny.cpp; sourceTree = "<group>"; };
@@ -81,13 +79,10 @@
 		13908EE72706886A000406E3 /* Equalize1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Equalize1.jpeg; sourceTree = "<group>"; };
 		13ABF9612713CE8E00B174E3 /* laplgauss.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = laplgauss.cpp; sourceTree = "<group>"; };
 		13BB373627517C9A00A918A8 /* kmeans.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kmeans.cpp; sourceTree = "<group>"; };
-		13BB373B27517E5E00A918A8 /* sushi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sushi.jpg; sourceTree = "<group>"; };
 		13BB37402751970200A918A8 /* KmeansDiff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KmeansDiff.png; sourceTree = "<group>"; };
 		13BB37412751971C00A918A8 /* Readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 		13E74F6E2706834A00C4958D /* equalize.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = equalize.cpp; sourceTree = "<group>"; };
 		13F4C2582734B19D006846D5 /* addweighted.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = addweighted.cpp; sourceTree = "<group>"; };
-		13F4C2642734B317006846D5 /* blend1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blend1.jpg; sourceTree = "<group>"; };
-		13F4C2652734B317006846D5 /* blend2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blend2.jpg; sourceTree = "<group>"; };
 		13F4C2672734B5CD006846D5 /* tiltshift.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tiltshift.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -262,14 +257,9 @@
 		13364D6D26FD441800B0CB6A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				13BB373B27517E5E00A918A8 /* sushi.jpg */,
-				130CC49827499C4700C3DC16 /* monalisa.jpg */,
+				130BB14C276172B40063607E /* MarioGalaxy.jpg */,
 				130BBE612738975100199DDB /* SunsetTimelapse.mp4 */,
-				13F4C2642734B317006846D5 /* blend1.jpg */,
-				13F4C2652734B317006846D5 /* blend2.jpg */,
 				13364D6E26FD441800B0CB6A /* Growlithe.png */,
-				13364D6F26FD441800B0CB6A /* bolhas.png */,
-				1308865E270A3B4700C93F4E /* bolhas2.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";

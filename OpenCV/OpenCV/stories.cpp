@@ -4,14 +4,14 @@
 using namespace cv;
 using namespace std;
 
-void printmask(cv::Mat &m) {
-    for (int i = 0; i < m.size().height; i++) {
-        for (int j = 0; j < m.size().width; j++) {
-            std::cout << m.at<float>(i, j) << ",";
-        }
-        std::cout << "\n";
-    }
-}
+int textXSliderMax = 430;
+int textYSliderMax = 460;
+
+int textXSlider = 10;
+int textYSlider = 460;
+
+char TrackbarName[50];
+
 
 int getUpdatedFilterIndex(int maxValue, int currentValue, bool isIncrementing) {
     
@@ -68,16 +68,16 @@ int main(int, char **) {
                          -1, 4, -1,
                          0, -1, 0);
     
+    double fontSize = 455;
     int maxFilters = 5;
     int filtersIndex = -1;
     Mat filters[5] = {sepia, media, gauss, horizontal, laplacian};
     
-    char currentMode = 'f';
+    char currentMode = 'n';
     string userText = "";
     
     cv::Mat frame, framegray;
     cv::Mat result;
-    double width, height;
     char key;
     
     string imgPath = "Growlithe.png";
@@ -86,8 +86,24 @@ int main(int, char **) {
     
     Mat img = imread(imgPath, cv::IMREAD_COLOR);
     
+    textXSliderMax = img.size().width - 30;
+    textYSliderMax = img.size().height - 20;
+    textYSlider = textYSliderMax;
+    fontSize = textYSliderMax / fontSize;
+    cout << "FONT SIZE: " << fontSize;
+    
     cv::namedWindow("filtroespacial", cv::WINDOW_NORMAL);
     cv::namedWindow("original", cv::WINDOW_NORMAL);
+    
+    sprintf(TrackbarName, "Text X %d", textXSliderMax);
+    createTrackbar(TrackbarName, "filtroespacial",
+                   &textXSlider,
+                   textXSliderMax);
+    
+    sprintf(TrackbarName, "Text Y %d", textYSliderMax);
+    createTrackbar(TrackbarName, "filtroespacial",
+                   &textYSlider,
+                   textYSliderMax);
     
     for (;;) {
         cv::cvtColor(img, framegray, cv::IMREAD_COLOR);
@@ -105,12 +121,12 @@ int main(int, char **) {
             
             cv::transform(img, result, currentFilter);
 //            cv::flip(result, result, 1);
-//            cv::putText(result, title, cv::Point(10, 30), cv::QT_FONT_NORMAL, 1, Scalar(255, 255, 255), 2);
-            cv::putText(result, userText, cv::Point(10, 460), cv::QT_FONT_NORMAL, 1, Scalar(255, 255, 255), 2);
+            cv::putText(result, title, cv::Point(10, 30*fontSize), cv::QT_FONT_NORMAL, fontSize, Scalar(255, 255, 255), 2);
+            cv::putText(result, userText, cv::Point(textXSlider, textYSlider), cv::QT_FONT_NORMAL, fontSize, Scalar(255, 255, 255), 2);
             cv::imshow("filtroespacial", result);
         } else {
-//            cv::putText(framegray, title, cv::Point(10, 30), cv::QT_FONT_NORMAL, 1, Scalar(255, 255, 255), 2);
-            cv::putText(framegray, userText, cv::Point(10, 460), cv::QT_FONT_NORMAL, 1, Scalar(255, 255, 255), 2);
+            cv::putText(framegray, title, cv::Point(10, 30*fontSize), cv::QT_FONT_NORMAL, fontSize, Scalar(255, 255, 255), 2);
+            cv::putText(framegray, userText, cv::Point(textXSlider, textYSlider), cv::QT_FONT_NORMAL, fontSize, Scalar(255, 255, 255), 2);
             cv::imshow("filtroespacial", framegray);
         }
         
@@ -127,7 +143,12 @@ int main(int, char **) {
                 currentMode = 't';
                 cout << "Por favor, digite o texto desejado: ";
                 cin >> userText;
-                currentMode = 'f';
+                currentMode = 'n';
+                break;
+            case 'n':
+                if(currentMode != 't') {
+                    currentMode = 'n';
+                }
                 break;
             case 's':
                 if(currentMode != 't') {
