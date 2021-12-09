@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		130BB159276198570063607E /* stories.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 134505C227598E6A00DC6BB1 /* stories.cpp */; };
 		130F4C0326F8FA9700C8658B /* pixels.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 130F4C0226F8FA9700C8658B /* pixels.cpp */; };
-		131DA4F0275D506B007B739A /* stories.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 134505C227598E6A00DC6BB1 /* stories.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +31,11 @@
 		13088663270A3BCC00C93F4E /* 2. Resultado2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2. Resultado2.png"; sourceTree = "<group>"; };
 		13088667270A5FDE00C93F4E /* motiondetector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = motiondetector.cpp; sourceTree = "<group>"; };
 		130BB14C276172B40063607E /* MarioGalaxy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MarioGalaxy.jpg; sourceTree = "<group>"; };
+		130BB14F27617FBB0063607E /* teste.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = teste.cpp; sourceTree = "<group>"; };
+		130BB1532761840C0063607E /* yiSHq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yiSHq.png; sourceTree = "<group>"; };
+		130BB154276184170063607E /* HJMRl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HJMRl.png; sourceTree = "<group>"; };
+		130BB15C27619D1C0063607E /* sticker2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker2.png; sourceTree = "<group>"; };
+		130BB15D27619D1C0063607E /* sticker1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker1.png; sourceTree = "<group>"; };
 		130BBE56273890DC00199DDB /* Image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image1.png; sourceTree = "<group>"; };
 		130BBE57273890DC00199DDB /* Image4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image4.png; sourceTree = "<group>"; };
 		130BBE58273890DC00199DDB /* Image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image2.png; sourceTree = "<group>"; };
@@ -130,6 +135,15 @@
 				13088663270A3BCC00C93F4E /* 2. Resultado2.png */,
 			);
 			path = Resultados;
+			sourceTree = "<group>";
+		};
+		130BB15B27619D140063607E /* stickers */ = {
+			isa = PBXGroup;
+			children = (
+				130BB15D27619D1C0063607E /* sticker1.png */,
+				130BB15C27619D1C0063607E /* sticker2.png */,
+			);
+			path = stickers;
 			sourceTree = "<group>";
 		};
 		130BBE55273890BF00199DDB /* Tiltshift */ = {
@@ -250,6 +264,7 @@
 				132EF8E726F42A87002DC6B7 /* OpenCV.entitlements */,
 				13364D6D26FD441800B0CB6A /* Resources */,
 				134505C227598E6A00DC6BB1 /* stories.cpp */,
+				130BB14F27617FBB0063607E /* teste.cpp */,
 			);
 			path = OpenCV;
 			sourceTree = "<group>";
@@ -257,6 +272,9 @@
 		13364D6D26FD441800B0CB6A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				130BB15B27619D140063607E /* stickers */,
+				130BB154276184170063607E /* HJMRl.png */,
+				130BB1532761840C0063607E /* yiSHq.png */,
 				130BB14C276172B40063607E /* MarioGalaxy.jpg */,
 				130BBE612738975100199DDB /* SunsetTimelapse.mp4 */,
 				13364D6E26FD441800B0CB6A /* Growlithe.png */,
@@ -438,7 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				130F4C0326F8FA9700C8658B /* pixels.cpp in Sources */,
-				131DA4F0275D506B007B739A /* stories.cpp in Sources */,
+				130BB159276198570063607E /* stories.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

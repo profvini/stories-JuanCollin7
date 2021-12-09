@@ -10,8 +10,17 @@ int textYSliderMax = 460;
 int textXSlider = 10;
 int textYSlider = 460;
 
-char TrackbarName[50];
+int stickerXSliderMax = 430;
+int stickerYSliderMax = 460;
+int stickerSliderMax = 2;
 
+int stickerXSlider = 0;
+int stickerYSlider = 0;
+int stickerSlider = 0;
+
+int stickerSize = 200;
+
+char TrackbarName[50];
 
 int getUpdatedFilterIndex(int maxValue, int currentValue, bool isIncrementing) {
     
@@ -42,6 +51,18 @@ string getTitle(char currentMode) {
         default:
             return "";
     }
+}
+
+cv::Mat applySticker(cv::Mat refImage) {
+    if(stickerSlider == 0) { return refImage; }
+    string stickers[2] = { "sticker1.png", "sticker2.png" };
+    Mat stickerImage = imread("stickers/" + stickers[stickerSlider-1], cv::IMREAD_ANYCOLOR);
+    
+    cv::resize(stickerImage, stickerImage, cv::Size(stickerSize, stickerSize), 0, 0, cv::INTER_LINEAR);
+    
+    stickerImage.copyTo(refImage(cv::Rect(stickerXSlider, stickerYSlider, stickerImage.cols, stickerImage.rows)));
+    
+    return refImage;
 }
 
 int main(int, char **) {
@@ -92,23 +113,39 @@ int main(int, char **) {
     fontSize = textYSliderMax / fontSize;
     cout << "FONT SIZE: " << fontSize;
     
-    cv::namedWindow("filtroespacial", cv::WINDOW_NORMAL);
-    cv::namedWindow("original", cv::WINDOW_NORMAL);
+    stickerXSliderMax = img.size().width - stickerSize;
+    stickerYSliderMax = img.size().height - stickerSize;
+    
+    cv::namedWindow("stories", cv::WINDOW_NORMAL);
     
     sprintf(TrackbarName, "Text X %d", textXSliderMax);
-    createTrackbar(TrackbarName, "filtroespacial",
+    createTrackbar(TrackbarName, "stories",
                    &textXSlider,
                    textXSliderMax);
     
     sprintf(TrackbarName, "Text Y %d", textYSliderMax);
-    createTrackbar(TrackbarName, "filtroespacial",
+    createTrackbar(TrackbarName, "stories",
                    &textYSlider,
                    textYSliderMax);
     
+    sprintf(TrackbarName, "Sticker X %d", stickerXSliderMax);
+    createTrackbar(TrackbarName, "stories",
+                   &stickerXSlider,
+                   stickerXSliderMax);
+    
+    sprintf(TrackbarName, "Sticker Y %d", stickerYSliderMax);
+    createTrackbar(TrackbarName, "stories",
+                   &stickerYSlider,
+                   stickerYSliderMax);
+    
+    sprintf(TrackbarName, "Sticker %d", stickerSliderMax);
+    createTrackbar(TrackbarName, "stories",
+                   &stickerSlider,
+                   stickerSliderMax);
+    
     for (;;) {
         cv::cvtColor(img, framegray, cv::IMREAD_COLOR);
-//        cv::flip(framegray, framegray, 1);
-        cv::imshow("original", framegray);
+//        cv::imshow("original", framegray);
         
         framegray.convertTo(result, CV_8U);
         
@@ -118,16 +155,24 @@ int main(int, char **) {
         
         if(filtersIndex >= 0) {
             currentFilter = filters[filtersIndex];
-            
+            // Aplica filtro
             cv::transform(img, result, currentFilter);
-//            cv::flip(result, result, 1);
-            cv::putText(result, title, cv::Point(10, 30*fontSize), cv::QT_FONT_NORMAL, fontSize, Scalar(255, 255, 255), 2);
+            // Aplica texto
             cv::putText(result, userText, cv::Point(textXSlider, textYSlider), cv::QT_FONT_NORMAL, fontSize, Scalar(255, 255, 255), 2);
-            cv::imshow("filtroespacial", result);
+            // Aplica sticker
+            result = applySticker(result);
+            // Aplica titulo
+            cv::putText(result, title, cv::Point(10, 30*fontSize), cv::QT_FONT_NORMAL, fontSize, Scalar(255, 255, 255), 2);
+            
+            cv::imshow("stories", result);
         } else {
-            cv::putText(framegray, title, cv::Point(10, 30*fontSize), cv::QT_FONT_NORMAL, fontSize, Scalar(255, 255, 255), 2);
+            // Aplica texto
             cv::putText(framegray, userText, cv::Point(textXSlider, textYSlider), cv::QT_FONT_NORMAL, fontSize, Scalar(255, 255, 255), 2);
-            cv::imshow("filtroespacial", framegray);
+            // Aplica sticker
+            result = applySticker(framegray);
+            // Aplica titulo
+            cv::putText(framegray, title, cv::Point(10, 30*fontSize), cv::QT_FONT_NORMAL, fontSize, Scalar(255, 255, 255), 2);
+            cv::imshow("stories", framegray);
         }
         
         key = (char)cv::waitKey(10);
@@ -178,7 +223,7 @@ int main(int, char **) {
                 string name = "";
                 cout << "Por favor, digite o nome do arquivo: ";
                 cin >> name;
-                imwrite(name + ".jpg", result);
+                imwrite("outputs/" + name + ".jpg", result);
                 return 0;
         }
     }
