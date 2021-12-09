@@ -76,6 +76,7 @@
 		136FCBE72713D47000DA6715 /* laplgauss2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laplgauss2.png; sourceTree = "<group>"; };
 		136FCBE82713D47000DA6715 /* laplgauss1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laplgauss1.png; sourceTree = "<group>"; };
 		136FCBE92713D47000DA6715 /* laplgauss3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laplgauss3.png; sourceTree = "<group>"; };
+		137260CA27627A6F00CBD234 /* Readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 		13764958270A7328003309B3 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 		1376495B270A7993003309B3 /* Motion Detector.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "Motion Detector.mov"; sourceTree = "<group>"; };
 		13908EE42706886A000406E3 /* Equalize4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Equalize4.jpeg; sourceTree = "<group>"; };
@@ -262,6 +263,7 @@
 			children = (
 				134505BA27598C7400DC6BB1 /* Backup para consulta */,
 				132EF8E726F42A87002DC6B7 /* OpenCV.entitlements */,
+				137260CA27627A6F00CBD234 /* Readme.txt */,
 				13364D6D26FD441800B0CB6A /* Resources */,
 				134505C227598E6A00DC6BB1 /* stories.cpp */,
 				130BB14F27617FBB0063607E /* teste.cpp */,
