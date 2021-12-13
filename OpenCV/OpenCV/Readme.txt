@@ -30,7 +30,7 @@ Para salvar a imagem foi utilizada a função 'imwrite'. Quando a letra 's' é c
 
 Detalhes do desenvolvimento:
 
-A primeira dúvida era de como fazer a interação do usuário, então tive a ideia de fazer tudo pelo teclado, criando uma certa "máquina de estados" para os inputs, porém após isto, eu percebi que a maioria da funções poderiam ser utilizadas apenas com os sliders que estavam presentes nos exercícios, então adicionei sliders e fui removendo as funções do teclado. Por fim, foi necessário utilizar o teclado apenas para texto e para salvar.
+A primeira dúvida era de como fazer a interação do usuário, então tive a ideia de fazer tudo pelo teclado, criando uma lógica com switch case para os inputs, porém após isto, eu percebi que a maioria da funções poderiam ser utilizadas apenas com os sliders que estavam presentes nos exercícios, então adicionei sliders e fui removendo as funções do teclado. Por fim, foi necessário utilizar o teclado apenas para texto e para salvar.
 Não consegui encontrar também como abrir uma imagem ou vídeo do computador, então utilizei o 'imread' para ler arquivos do projeto mesmo.
 
 Eu iniciei pelo sistema de filtro por julgar mais fácil, visto que um dos exercícios aplicavam filtros, porém eu não sei o porque mas os filtros não estavam sendo aplicados e/ou ficaram estranhos na imagem. Então depois de pesquisar e tentar algumas coisas, encontrei o método 'transform' que resolveu o meu problema.

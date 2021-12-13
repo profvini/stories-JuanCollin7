@@ -1,6 +1,8 @@
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
+// Redimensionar sticker
+
 using namespace cv;
 using namespace std;
 
@@ -24,6 +26,9 @@ int stickerSlider = 0;
 int stickerSize = 200;
 
 char TrackbarName[50];
+
+double fontSize = 455;
+string userText = "";
 
 cv::Mat applySticker(cv::Mat refImage) {
     if(stickerSlider == 0) { return refImage; }
@@ -102,41 +107,101 @@ void createTrackbars() {
                    filterSliderMax);
 }
 
-int main(int, char **) {
+int saveVideo(VideoCapture video, string name) {
     
-    double fontSize = 455;
+    cv::Mat img, result;
+
+    video.set(CAP_PROP_POS_FRAMES, 0);
+    
+    VideoWriter outputVideo;
+    
+    Size videoSize = Size((int) video.get(CAP_PROP_FRAME_WIDTH),
+                          (int) video.get(CAP_PROP_FRAME_HEIGHT));
+    
+    int ex = static_cast<int>(video.get(CAP_PROP_FOURCC));
+    outputVideo.open(name + ".mp4", ex, video.get(CAP_PROP_FPS), videoSize, true);
+
+    while(true) {
+        video >> img;
+
+        img.convertTo(result, CV_8U);
+        
+        // Aplica filtro
+        result = applyFilter(result);
+        // Aplica texto
+        cv::putText(result, userText, cv::Point(textXSlider, textYSlider), cv::QT_FONT_NORMAL, fontSize, Scalar(255, 255, 255), 2);
+        // Aplica sticker
+        result = applySticker(result);
+        
+        outputVideo << img;
+    }
+    
+    return 0;
+}
+
+int main(int, char **) {
+
+    string fileType = "f";
+    string filePath = "Growlithe.png";
     
     char currentMode = 'n';
-    string userText = "";
+    
+    
+    cv::Mat img;
+    VideoCapture inputVideo("SunsetTimelapse.mp4");
     
     cv::Mat framegray, result;
     char key;
     
-    string imgPath = "Growlithe.png";
+    cout << "Gostaria de abrir uma foto ou vídeo? [f/v]";
+    cin >> fileType;
+    
+    
     cout << "Por favor, digite o nome do arquivo: ";
-    cin >> imgPath;
+    cin >> filePath;
     
-    Mat img = imread(imgPath, cv::IMREAD_COLOR);
-    
-    textXSliderMax = img.size().width - 30;
-    textYSliderMax = img.size().height - 20;
-    textYSlider = textYSliderMax;
-    fontSize = textYSliderMax / fontSize;
-    cout << "FONT SIZE: " << fontSize;
-    
-    stickerXSliderMax = img.size().width - stickerSize;
-    stickerYSliderMax = img.size().height - stickerSize;
+    if(fileType == "f") {
+        img = imread(filePath, cv::IMREAD_COLOR);
+        
+        textXSliderMax = img.size().width - 30;
+        textYSliderMax = img.size().height - 20;
+        textYSlider = textYSliderMax;
+        fontSize = textYSliderMax / fontSize;
+        
+        stickerXSliderMax = img.size().width - stickerSize;
+        stickerYSliderMax = img.size().height - stickerSize;
+    } else {
+        VideoCapture inputVideo(filePath);
+        
+        Size videoSize = Size((int) inputVideo.get(CAP_PROP_FRAME_WIDTH),
+                              (int) inputVideo.get(CAP_PROP_FRAME_HEIGHT));
+        
+        textXSliderMax = videoSize.width - 30;
+        textYSliderMax = videoSize.height - 20;
+        textYSlider = textYSliderMax;
+        fontSize = textYSliderMax / fontSize;
+        
+        stickerXSliderMax = videoSize.width - stickerSize;
+        stickerYSliderMax = videoSize.height - stickerSize;
+    }
     
     cv::namedWindow("stories", cv::WINDOW_NORMAL);
     
     createTrackbars();
     
+    int frame_counter = 0;
+    
     for (;;) {
-        cv::cvtColor(img, framegray, cv::IMREAD_COLOR);
-        
-        framegray.convertTo(result, CV_8U);
-        
-        Mat currentFilter;
+        if(fileType == "v") {
+            frame_counter += 1;
+            if(frame_counter == inputVideo.get(CAP_PROP_FRAME_COUNT)) {
+                frame_counter = 0;
+                inputVideo.set(CAP_PROP_POS_FRAMES, frame_counter);
+            }
+            inputVideo >> img;
+        }
+
+        img.convertTo(result, CV_8U);
         
         // Aplica filtro
         result = applyFilter(result);
@@ -159,20 +224,21 @@ int main(int, char **) {
                 break;
             case 's':
                 if(currentMode != 't') {
-                    currentMode = 's';
+                    string name = "";
+                    cout << "Por favor, digite o nome do arquivo: ";
+                    cin >> name;
+                    
+                    if(fileType == "f") {
+                        imwrite(name + ".jpg", result);
+                    } else {
+                        saveVideo(inputVideo, name);
+                    }
+                    
+                    return 0;
                 }
                 break;
             default:
                 break;
-        }
-        
-        switch(currentMode) {
-            case 's':
-                string name = "";
-                cout << "Por favor, digite o nome do arquivo: ";
-                cin >> name;
-                imwrite(name + ".jpg", result);
-                return 0;
         }
     }
     return 0;
