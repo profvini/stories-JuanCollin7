@@ -119,9 +119,12 @@ int saveVideo(VideoCapture video, string name) {
                           (int) video.get(CAP_PROP_FRAME_HEIGHT));
     
     int ex = static_cast<int>(video.get(CAP_PROP_FOURCC));
-    outputVideo.open(name + ".mp4", ex, video.get(CAP_PROP_FPS), videoSize, true);
+    outputVideo.open(name + ".mp4", ex, video.get(CAP_PROP_FPS), videoSize);
 
-    while(true) {
+    int frame_counter = 0;
+    int videoFrames = video.get(CAP_PROP_FRAME_COUNT);
+    
+    while(frame_counter < videoFrames) {
         video >> img;
 
         img.convertTo(result, CV_8U);
@@ -133,7 +136,11 @@ int saveVideo(VideoCapture video, string name) {
         // Aplica sticker
         result = applySticker(result);
         
-        outputVideo << img;
+        outputVideo.write(result);
+        
+        frame_counter += 1;
+        video.set(CAP_PROP_POS_FRAMES, frame_counter);
+        cout << "Saving: " << (double)frame_counter/(double)videoFrames*100.0 << "%\n";
     }
     
     return 0;
@@ -153,7 +160,7 @@ int main(int, char **) {
     cv::Mat framegray, result;
     char key;
     
-    cout << "Gostaria de abrir uma foto ou vídeo? [f/v]";
+    cout << "Gostaria de abrir uma foto ou vídeo? [f/v] ";
     cin >> fileType;
     
     

@@ -3,6 +3,9 @@ Stories:
 O objetivo deste trabalho é simular os stories do aplicativo instagram.
 Funções criadas: Aplicação de filtro, stickers e texto. Além de salvar a imagem.
 
+O programa começa perguntando ao usuário se o tipo de arquivo é foto(f) ou vídeo(v), e após isto solicita o nome do arquivo.
+
+Após carregar o arquivo com sucesso, o programa mostra um preview com alguns sliders para sua customização.
 
 Filtros:
 
@@ -27,6 +30,10 @@ Salvar imagem:
 
 Para salvar a imagem foi utilizada a função 'imwrite'. Quando a letra 's' é clicada pelo usuário, uma mensagem é exibida perguntando o nome de saída da imagem, então ao digitar o nome e clicar enter, a imagem é salva e o programa é encerrado.
 
+Salvar vídeo:
+
+Para salvar vídeo foi utilizado o 'VideoWriter'. Quando a letra 's' é clicada pelo usuário, o programa inicializa uma VideoWriter para ser o nosso arquivo de saída, e após isto percorre cada frame do vídeo, aplicando filtro, texto e sticker e salvando nesta saída. Após passar por todos os frams do vídeo, o programa é encerrado.
+
 
 Detalhes do desenvolvimento:
 
@@ -39,9 +46,15 @@ Após isto fiz o sistema de adicionar texto, e acho que foi a funcionalidade mai
 
 E por último, adicionei o sistema de stickers, este foi bem chatinho, pois encontrei apenas umas duas respostas na internet e elas não funcionavam, então fui testando e mexendo até que por fim, funcionou. Acabei utilizando a função 'copyTo'. Único ponto negativo é que não consegui adicionar a imagem com transparência, então ela ficou com fundo preto.
 
+A lógica para manipular vídeos veio depois da primeira apresentação, o desafio aqui foi que para salvar a imagem era bem simples, apenas uma função, já para o vídeo foi diferente, foi necessário fazer um while para percorrer todos os frames do vídeo e o método de salvar não era o mesmo. A parte boa foi que pude aproveitar todas as funções de aplicação de filtros, texto e sticker.
+
+
+Arquivos editados por este programa podem ser encontrados no diretório "Resources/Results".
+
 
 Como utilizar:
 
+Ao iniciar, será necessário responder as questões de tipo e nome de arquivo.
 Para inserir os filtros e stickers, basta utilizar os sliders referentes na janela.
 Para inserir um texto, clique na letra 't', digite seu texto no terminal e pressione enter. Após isso, você pode movê-lo utilizando os sliders referentes.
-Para salvar a imagem, clique na letra 's', digite o nome da imagem de saída e pressione enter. Após isto, a imagem será salva na pasta "Resources" do projeto e o programa será encerrado.
+Para salvar a imagem/video, clique na letra 's', digite o nome do arquivo de saída e pressione enter. Após isto, o arquivo será salvo na pasta "Resources" do projeto e o programa será encerrado.
